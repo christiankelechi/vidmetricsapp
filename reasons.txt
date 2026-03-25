@@ -1,10 +1,11 @@
 ### Build Breakdown
-- **Time**: ~2 Hours
-- **Tools**: Next.js 14, Tailwind CSS, shadcn/ui, Recharts, youtube-sr, Lucide React.
-- **AI Efficiency**: 
-  - Automated component scaffolding and type definitions.
-  - Used AI to draft the "trending" algorithm (Views/Age vs Avg).
-  - Accelerated dashboard assembly by 3x compared to manual coding.
+- **Timeline**: **Completed in ~2 Hours** (from napkin sketch to production-ready MVP).
+- **Automation & Efficiency**: 
+  - Scaffolding: Next.js 14 + shadcn/ui for rapid design.
+  - Transformation: Automated the mapping of complex YouTube metadata to Recharts-ready formats.
+- **Problem Solving**: When initial testing revealed "0" view values, I implemented a validation script to diagnose the playlist API limitation and successfully pivoted to a search-based extraction method.
+- **Verification**: Integrated `Vitest` for automated regression testing, successfully validated against high-frequency channels like **MIT OpenCourseWare**.
+- **Configuration**: Migrated all hardcoded URLs to `.env` for demo portability and production readiness.
 
 ### Product Thinking
 - **Metric Calibration**: Chose to prioritize "Monthly Reach" as the primary KPI to align with the founder's goal of seeing "who is crushing it *this month*".

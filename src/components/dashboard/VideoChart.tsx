@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { AnalysisResult } from "@/types/youtube";
 import { 
   BarChart, 
@@ -14,10 +15,18 @@ import {
 import { formatCompactNumber } from "@/lib/utils";
 
 export function VideoChart({ data }: { data: AnalysisResult }) {
+  const [mounted, setMounted] = useState(false);
+  
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   // Take top 10 videos by views for the chart
   const chartData = [...data.videos]
     .sort((a, b) => b.views - a.views)
     .slice(0, 10);
+
+  if (!mounted) return <div className="h-[400px] w-full bg-white/5 border border-white/10 rounded-2xl p-6 mb-8 animate-pulse" />;
 
   return (
     <div className="h-[400px] w-full bg-white/5 border border-white/10 rounded-2xl p-6 mb-8">
@@ -51,7 +60,7 @@ export function VideoChart({ data }: { data: AnalysisResult }) {
             }}
             itemStyle={{ color: '#ef4444' }}
             labelStyle={{ marginBottom: '4px', fontWeight: '600' }}
-            formatter={(value: number) => [formatCompactNumber(value), "Views"]}
+            formatter={(value: any) => [formatCompactNumber(Number(value)), "Views"]}
           />
           <Bar 
             dataKey="views" 

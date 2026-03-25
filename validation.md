@@ -17,7 +17,8 @@
 - [x] Pivot: Switched to `YouTube.search(query, { type: "video" })`.
 - [x] Result: Views and Subscribers are now correctly populated.
 
-### Verification (2026-03-25 21:18)
-- [x] Bug: View strings were concatenating instead of summing (JS type casting issue).
-- [x] Fix: Explicit `Number()` casting implemented in `src/lib/youtube.ts`.
-- [x] Result: Monthly Reach and Total Views now aggregate correctly.
+### Verification (FINAL - 2026-03-25 21:42)
+- [x] **Automated Regression**: `npm test` passing for `@mitocw` (Integration).
+- [x] **Boundary Testing**: Validated error handling for invalid channel URLs.
+- [x] **Environment Security**: All YouTube watch/channel URLs moved to `.env`.
+- [x] **End-to-End**: Dashboard confirmed to render non-zero stats for all test cases.

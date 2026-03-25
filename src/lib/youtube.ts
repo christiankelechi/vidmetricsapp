@@ -53,7 +53,7 @@ export async function analyzeChannel(channelUrl: string): Promise<AnalysisResult
         views: viewCount,
         uploadedAt: v.uploadedAt || "Unknown date",
         duration: v.duration || 0,
-        url: `https://www.youtube.com/watch?v=${v.id}`,
+        url: `${process.env.NEXT_PUBLIC_YOUTUBE_URL_WATCH || "https://www.youtube.com/watch?v="}${v.id}`,
         isRecent: isRecent, // Added for "This Month" identification
       };
     });
