@@ -1,0 +1,20 @@
+### Build Breakdown
+- **Time**: ~2 Hours
+- **Tools**: Next.js 14, Tailwind CSS, shadcn/ui, Recharts, youtube-sr, Lucide React.
+- **AI Efficiency**: 
+  - Automated component scaffolding and type definitions.
+  - Used AI to draft the "trending" algorithm (Views/Age vs Avg).
+  - Accelerated dashboard assembly by 3x compared to manual coding.
+
+### Product Thinking
+- **Metric Calibration**: Chose to prioritize "Monthly Reach" as the primary KPI to align with the founder's goal of seeing "who is crushing it *this month*".
+- **Temporal context**: Added "NEW" badges to distinguish recent uploads from the channel's evergreen library.
+- **Missing Features**: Real-time thumbnail A/B patterns, comment sentiment analysis, and multi-channel stack ranking.
+- **Version 2 Plan**: 
+  - Sub-niche clustering using NLP on video titles.
+  - Historical view velocity (how fast is it growing *today*?).
+  - Slack/Email digest of competitor uploads.
+
+### Trade-offs
+- Chose `youtube-sr` over official API to ship faster and avoid quota issues during the challenge demo.
+- Prioritized "Visual Reach" (Total Views/Avg) over engagement depth (Like/Comment ratios) for the initial napkin sketch MVP.
